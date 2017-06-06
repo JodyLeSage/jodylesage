@@ -16,9 +16,9 @@
 		<meta name="author" content="Jody LeSage" />
 		<title>Jody LeSage — Resume</title>
 		<link rel="stylesheet" href="styles/resume.css" />
-		
+
 		<script>
-			//TODO: move this code to an external file
+			//TODO: move this code to an external file?
 			function getCurrentYearAndMonth() {
 				var d = new Date();
 				var s = d.getFullYear() + '-';
@@ -28,10 +28,10 @@
 				var s = s + d.getMonth();
 				return s;
 			}
-			
+
 			window.onload = function() {
 				document.getElementById("present").setAttribute("datetime",getCurrentYearAndMonth());
-			}
+			};
 		</script>
 	</head>
 
@@ -105,7 +105,7 @@
 
 			<section class="experience">
 				<h2>Experience</h2>
-				
+
 				<details open>
 					<summary>
 						<span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
@@ -116,15 +116,34 @@
 							<time datetime="2017-07">Jul. 2017</time> - <time id="present">Present</time>
 						</span>
 					</summary>
-					<p>Hyperlink is a unified platform for searching and managing personal information streams across 13 online services, such as social updates from Twitter and cloud files from Dropbox.</p>
+					<p>Details of current work are classified.</p>
 					<ul>
-						<li>Developed the backend in Python 3, with Flask/PostgreSQL/ElasticSearch/Celery as main stack.</li>
-						<li>Designed the frontend using AngularJS, including extensive unit and end-to-end testing.</li>
-						<li>Deployed the system on Amazon Web Services with Docker, designed and validated the scaling strategy.</li>
+						<li>
+							<span itemscope itemtype="http://www.w3.org/2002/07/owl#Thing">
+								<link itemprop="sameAs" href="http://dbpedia.org/page/Security_clearance" />
+								TS
+							</span>
+							/
+							<span itemscope itemtype="http://www.w3.org/2002/07/owl#Thing">
+								<link itemprop="sameAs" href="http://dbpedia.org/page/Sensitive_Compartmented_Information" />
+								SCI
+							</span>
+							clearance with full scope 
+							<span itemscope itemtype="http://www.w3.org/2002/07/owl#Thing">
+								<link itemprop="sameAs" href="http://dbpedia.org/page/Polygraph" />
+								Poly.
+							</span>
+						</li>
+						<li>
+							<span itemscope itemtype="http://www.w3.org/2002/07/owl#Thing">
+								<link itemprop="sameAs" href="http://dbpedia.org/page/Agile_software_development" />
+								Agile
+							</span>
+							development.
+						</li>
 					</ul>
-
 				</details>
-				
+
 				<details open>
 					<summary>
 						<span itemscope itemtype="http://schema.org/Organization">
@@ -145,104 +164,35 @@
 
 				<details open>
 					<summary>
-						<span itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+						<span itemscope itemtype="http://schema.org/Organization">
 							<link href="https://www.boozallen.com" itemprop="url" />
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
+						<span class="time-range">
+							<time datetime="2016-06">Jun. 2016</time> - <time datetime="2016-08">Aug. 2016</time>
+						</span>
 					</summary>
-					<p>Hyperlink is a unified platform for searching and managing personal information streams across 13 online services, such as social updates from Twitter and cloud files from Dropbox.</p>
+					<p>Participated in Booz Allen Hamilton's 2016 summer cyber internship as an enterprise developer on the SmartBillboard project</p>
 					<ul>
-						<li>Developed the backend in Python 3, with Flask/PostgreSQL/ElasticSearch/Celery as main stack.</li>
-						<li>Designed the frontend using AngularJS, including extensive unit and end-to-end testing.</li>
-						<li>Deployed the system on Amazon Web Services with Docker, designed and validated the scaling strategy.</li>
+						<li>Wrote a program to scrape web content and associate keywords with websites using Python. </li>
+						<li>Combined the harvested dataset (features) with a 3rd party dataset (labels).</li>
+						<li>Used the now-labeled dataset to successfully predict demographic information from web traffic.</li>
 					</ul>
-
 				</details>
 
-				<details open>
-					<summary>SwitchPal, Project Leader
-						<time>2014 - 2015</time>
-					</summary>
-					<p>SwitchPal is a device that snaps over an existing switch and turn it into a smart one. Equipped with multiple sensors, it can automate household appliances according to personal preferences.</p>
-					<ul>
-						<li>Designed the hardware based on the TI CC2540 MCU, controllable via a custom Bluetooth 4.0 profile.</li>
-						<li>Implemented and released the iOS and Android apps, handling asynchronous Bluetooth operations.</li>
-						<li>Saved more than 2/3 electricity by deploying to student hostels to automatically control the air conditioners.</li>
-					</ul>
-
-				</details>
-				<details open>
-					<summary>Entity Modeling and Retrieval System, Researcher
-						<time>2012 - 2015</time>
-					</summary>
-					<p>Proposed a novel entity retrieval system based on entity factoid hierarchy, together with a new entity model considering the HTML structure in webpages. Significantly improved the state-of-the-art performance.</p>
-					<ul>
-						<li>Consolidated information about millions of entities from ClueWeb09, Freebase and DBpedia.</li>
-						<li>Designed an entity processing pipeline based on Spark, decreasing the processing time from days to hours.</li>
-						<li>Implemented multiple retrieval models in Lucene, with customized query analyzer to handle entity queries.</li>
-					</ul>
-
-				</details>
-				<details open>
-					<summary>Twitter Recommendation System, Researcher
-						<time>2011 - 2012</time>
-					</summary>
-					<p>Built a personalized tweets recommendation system based on user profiles, achieved superior performance.</p>
-					<ul>
-						<li>Constructed user profiles by aggregating keywords in tweets and propagating interests among friends.</li>
-						<li>Crawled millions of tweets from hundreds of thousands of Twitter users to test the system.</li>
-					</ul>
-
-				</details>
 			</section>
+
 			<section class="skills">
 				<h2>Technical Skills</h2>
 				<ul>
-					<li>Language: Scala, Python, Java, JavaScript, PHP, C++</li>
-					<li>Database: PostgreSQL, MongoDB, MySQL</li>
-					<li>Framework: ElasticSearch, Lucene, Hadoop, Spark, ReactJS, AngularJS</li>
-					<li>Tool: Git, Gulp, Linux, Docker, Amazon Web Services</li>
+					<li>Languages: Python, C/C++, Java, Assembly (Intel x86), BASIC</li>
+					<li>Web: HTML, CSS, Javscript, JQuery, JQuery UI, Semantic Web</li>
+					<li>Frameworks: Flask, Bootstrap</li>
+					<li>Databases: MySQL, SQLite, SQL, SPARQL</li>
+					<li>Other: Git, Linux, <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>, MATLAB, microcontroller programming (Arduino UNO)</li>
 				</ul>
 			</section>
-			<section class="experiences">
-				<h2>Experiences</h2>
-				<ul>
-					<li>Semi-finalist in the 2015 Global Venture Labs Investment Competition, 2015</li>
-					<li>Teaching Assistant for four undergraduate engineering courses at CUHK, 2012-2015</li>
-					<li>Volunteer for the Charles K Kao Foundation for Alzheimer&#39;s Disease, 2011</li>
-					<li>Organizer of the 6th Information Security and Countermeasures Contest, 2010</li>
-					<li>Meritorious Winner in Mathematical Contest In Modeling, 2009</li>
-				</ul>
-			</section>
-			<section class="publications">
-				<h2>Selected Publications <a href="https://scholar.google.com.hk/citations?user=c5GAV_MAAAAJ" target="_blank">[more]</a>
-				</h2>
-				<ul>
-					<li>
-						<strong>C. Lu</strong>, W. Lam, Y. Liao. Entity Retrieval via Entity Factoid Hierarchy. In: Proceedings of the 53rd Annual Meeting of the Association for Computational Linguistics (ACL). 2015.</li>
-					<li>
-						<strong>C. Lu</strong>, L. Bing, W. Lam. Structured Positional Entity Language Model for Enterprise Entity Retrieval. In: Proceedings of the 22nd ACM Conference on Information and Knowledge Management (CIKM). 2013.</li>
-				</ul>
-			</section>
-			<section class="articles">
-				<h2>Selected Articles <a href="https://chunlianglyu.com/articles/" target="_blank">[more]</a>
-				</h2>
-				<ul>
-					<li>
-						<a href="https://chunlianglyu.com/articles/sorm2/" target="_blank">SORM2: Digging into Scala Internals</a>, Dec 2015</li>
-					<li>
-						<a href="https://chunlianglyu.com/articles/html-resume-with-semantic-markup/" target="_blank">HTML Resume with Semantic Markup</a>, Nov, 2015</li>
-					<li>
-						<a href="https://chunlianglyu.com/articles/developing-chrome-extension-with-angularjs/" target="_blank">Developing Chrome Extensions with AngularJS</a>, Nov, 2014</li>
-					<li>
-						<a href="https://chunlianglyu.com/articles/control-air-conditioner-with-raspberry-pi/" target="_blank">Control the Air Conditioner with Raspberry Pi</a>, Aug, 2013</li>
-				</ul>
-				<!--
-  Markdown link definitions:
-  By specify link titles as schema.org property names such as `alumniOf`,
-  we mark the corresponding link text with semantic markup.
--->
-			</section>
+
 
 		</main>
 	</body>
