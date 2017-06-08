@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <!--
@@ -16,7 +15,7 @@
 		<meta name="author" content="Jody LeSage" />
 		<title>Jody LeSage — Resume</title>
 		<link rel="stylesheet" href="styles/resume.css" />
-
+		
 		<script>
 			//TODO: move this code to an external file?
 			function getCurrentYearAndMonth() {
@@ -36,14 +35,16 @@
 	</head>
 
 	<body>
-		<main class="page theme-default" itemscope itemtype="http://schema.org/Person">
+		<main class="page" itemscope itemtype="http://schema.org/Person">
 			<header>
-				<h1 itemprop="honorificPrefix" itemscope itemtype="http://schema.org/Text">
-					<link itemprop="sameAs" href="http://dbpedia.org/page/Mx_(title)" />
-					Mx.
-				</h1>
+				<div class="name">
+					<h1 itemprop="honorificPrefix" itemscope itemtype="http://schema.org/Text">
+						<link itemprop="sameAs" href="http://dbpedia.org/page/Mx_(title)" />
+						Mx.
+					</h1>
 
-				<h1 itemprop="name">Jody LeSage</h1>
+					<h1 itemprop="name">Jody LeSage</h1>
+				</div>
 
 				<!-- place for personal metadata -->
 				<meta itemprop="alternateName" content="Jody Colter LeSage" />
@@ -112,7 +113,7 @@
 							<link href="https://www.boozallen.com" itemprop="url" />
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
-						<span class="time-range">
+						<span class="right-time-range">
 							<time datetime="2017-07">Jul. 2017</time> - <time id="present">Present</time>
 						</span>
 					</summary>
@@ -150,7 +151,7 @@
 							<link href="https://nextcentury.com" itemprop="url" />
 							<span itemprop="name">Next Century Corporation</span>
 						</span>
-						<span class="time-range">
+						<span class="right-time-range">
 							<time datetime="2017-02">Feb. 2017</time> - <time datetime="2017-05">May 2017</time>
 						</span>
 					</summary>
@@ -168,7 +169,7 @@
 							<link href="https://www.boozallen.com" itemprop="url" />
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
-						<span class="time-range">
+						<span class="right-time-range">
 							<time datetime="2016-06">Jun. 2016</time> - <time datetime="2016-08">Aug. 2016</time>
 						</span>
 					</summary>
@@ -189,7 +190,7 @@
 					<li>Web: HTML, CSS, Javscript, JQuery, JQuery UI, Semantic Web</li>
 					<li>Frameworks: Flask, Bootstrap</li>
 					<li>Databases: MySQL, SQLite, SQL, SPARQL</li>
-					<li>Other: Git, Linux, <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span>, MATLAB, microcontroller programming (Arduino UNO)</li>
+					<li>Other: Git, Linux, LaTeX, MATLAB, microcontroller programming (Arduino UNO)</li>
 				</ul>
 			</section>
 
