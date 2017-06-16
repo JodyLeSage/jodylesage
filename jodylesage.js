@@ -17,5 +17,3 @@ function addListeners(){
 		$('#' + $(this).attr('href') ).show(); //get the href and use it find which div to show
 	});
 }
-
-
