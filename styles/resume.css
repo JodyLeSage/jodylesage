@@ -9,19 +9,23 @@
 	#7a7a7a - medium gray
 */
 
-@media only screen and (min-width: 1024px)
-main {
-    margin: 1cm auto;
-    background: #fff;
-    box-shadow: 0 4px 5px rgba(75,75,75,0.2);
-    width: 21cm;
-    min-height: 29.7cm;
-    padding: 2cm;
+
+@media only screen and (min-width: 1024px) {
+	main {
+		margin: 1cm auto;
+		background: #fff;
+		box-shadow: 0 4px 5px rgba(75,75,75,0.2);
+		width: 21cm;
+		min-height: 29.7cm;
+		padding: 2cm;
+	}
+	
+	html, body {
+		background-color: #eee;
+	}
 }
 
-* {
-	
-}
+
 
 body {
 	color: #3d3935;
@@ -72,13 +76,6 @@ h2 {
 	text-transform: uppercase;
 	border-bottom: 0.8px solid #bcbcbc;
 	
-}
-
-main {
-	margin: 20px;
-
-	max-width: 1024px;
-	background: #f7f7f7;
 }
 
 main p {
