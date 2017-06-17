@@ -19,10 +19,8 @@ function addListeners(){
 	});
 	
 	// validate user when viewing private data
-	$('.contains-private-info').one('click', function(){
-		if(!userIsValidated){
-			grecaptcha.execute();
-		}
+	$(window).on('load', function(){
+		
 	});
 }
 
@@ -39,8 +37,16 @@ function userValidated(token) {
 	xmlhttp.send();
 }
 
-/* tells recaptcha how to behave */
+
 function onloadRecaptchaCallback(){
+	// add recaptcha listeners
+	$('.contains-private-info').one('click', function(){
+		if(!userIsValidated){
+			grecaptcha.execute();
+		}
+	});
+	
+	/* tells recaptcha how to behave */
 	grecaptcha.render('submitRecaptcha', {
 		'sitekey' : '6LeOwyUUAAAAAIy-WfjdNkxv-KcWauJ6mzSiICUH',
 		'callback' : userValidated

@@ -2,10 +2,19 @@ a {
 	color: #000000;
 }
 
+a[href]:after {
+	content: none !important;
+}
+
+#action-buttons {
+	display: none;
+}
+
 body {
 	color: #000000;
 	background: #fff;
 	font-family: "Times New Roman", Times, serif;
+	margin: 10px 10px 10px 10px;
 }
 
 html {
@@ -24,10 +33,11 @@ html {
 	float: left;
 	display: block;
 	width: 80px;
-	text-align: center;
+	text-align: right;
 	margin-left: -90px;
 	padding-right: 10px;
 	font-weight: 200;
+	font-size: 14px;
 }
 
 h1 {
@@ -48,7 +58,7 @@ h2:before{
 
 h2 {
 	font-family: "Times New Roman", Times, serif;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
 	padding-top: 12px;
 	padding-bottom: 2px;
@@ -66,7 +76,7 @@ main p {
 section {
 	padding-left: 80px;
 	margin-bottom: 0.5rem;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 section details {

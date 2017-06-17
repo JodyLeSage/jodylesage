@@ -7,7 +7,11 @@
 	#49837c - teal
 */
 
-
+#action-buttons {
+	float: left;
+	position: relative;
+	top: 12px;
+}
 
 @font-face {
     font-family: 'Droid Sans Bold';
