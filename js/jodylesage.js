@@ -40,11 +40,18 @@ function userValidated(token) {
 
 function onloadRecaptchaCallback(){
 	// add recaptcha listeners
-	$('.contains-private-info').one('click', function(){
+	$('.validate-button').on('click', function(){
 		if(!userIsValidated){
 			grecaptcha.execute();
 		}
 	});
+	
+	$('#resume-iframe').contents().find('header').contents().find('.validate-button').on('click', function(){
+		if(!userIsValidated){
+			grecaptcha.execute();
+		}
+	});
+	
 	
 	/* tells recaptcha how to behave */
 	grecaptcha.render('submitRecaptcha', {
@@ -59,20 +66,24 @@ function populatePersonalData(json){
 	var iframeBody = $('#resume-iframe').contents().find('body');
 	var emailItem = iframeBody.contents().find('#resume-email');
 	if(json["email"]){
+		userIsValidated = true;
+		
 		emailItem.attr({
 			"href" : "mailto:" + json["email"],
 			"itemprop" : "email"
 		});
 		emailItem.hide().html(json["email"]).fadeIn('slow');	// fade in for dramatic effect
+		
+		// update information on the contact page
+		// cannot be streamlined because of the iFrame
+		emailItem = $('#contact-email');
+		emailItem.attr({
+			"href" : "mailto:" + json["email"],
+			"itemprop" : "email"
+		});
+		emailItem.hide().html(json["email"]).fadeIn('slow');
+		
+		$('#resume-iframe').contents().find('header').contents().find('.validate-button').addClass('disabled').fadeIn('slow');
 	}
-	
-	// update information on the contact page
-	// cannot be streamlined because of the iFrame
-	emailItem = $('#contact-email');
-	emailItem.attr({
-		"href" : "mailto:" + json["email"],
-		"itemprop" : "email"
-	});
-	emailItem.hide().html(json["email"]).fadeIn('slow');
 	
 }

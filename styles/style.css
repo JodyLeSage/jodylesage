@@ -1,4 +1,5 @@
 /* css for jodylesage.com */
+@body-bg: #e7e7e7;
 
 body {
 	padding-top: 61px;;
@@ -16,6 +17,10 @@ body {
 	width: 100%;
 	height: 95%;
 	position: inherit;
+}
+
+form, div {
+	background-color: inherit;
 }
 
 .fill {
@@ -40,7 +45,6 @@ iframe {
 	border: none;
 	width: 100%;
 	height: 100%;
-	background-color: #f7f7f7;
 }
 
 @media only print{
@@ -72,14 +76,16 @@ iframe {
 		page-break-before: avoid;
 		page-break-inside: avoid;
 	};
+
+	#recaptcha{
+		display: none;
+	};
 }
 
 #recaptcha{
-	/*display: none;*/
-	padding-top: 0px;
-	display: none;
-};
+	/*padding-top: 0px;*/
+}
 
 #submitRecaptcha {
-	visibility: hidden;
-}
+	display: none;
+};
