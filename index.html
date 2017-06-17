@@ -29,7 +29,7 @@
 							<a data-toggle="tab" href="portfolio">Portfolio</a>
 						</li>
 						<li>
-							<a data-toggle="tab" href="resume">Resume</a>
+							<a data-toggle="tab" href="resume" class="contains-private-info" >Resume</a>
 						</li>
 						<li>
 							<a data-toggle="tab" href="contact">Contact</a>
@@ -52,7 +52,7 @@
 			</div>
 
 			<div id="resume" class="content">
-				<iframe src="resume.html">
+				<iframe id="resume-iframe" src="resume.html">
 				</iframe>
 			</div>
 
@@ -64,6 +64,7 @@
 						</div>
 						<div class="col-md-7">
 							<p>my info</p>
+							<a id="contact-email"></a>
 						</div>
 					</div>
 				</div>
@@ -71,6 +72,12 @@
 			</div>
 		</div>
 
+		<!-- hidden form for invisible recaptcha -->
+		<form id="recaptcha">
+			<div class="g-recaptcha" data-size="invisible" />
+			<input id='submitRecaptcha' type="submit" value="Submit" />
+		</form>
+		
 		<!--
 		javascript (jquery, jquery ui, bootstrap, custom)
 		page loads faster if this is put at the end of the body
@@ -85,6 +92,8 @@
 		<!-- custom JS must go before reCAPTCHA -->
 		<script src="jodylesage.js"></script>
 		
+		<!-- reCAPTCHA assets -->
+		<script src="https://www.google.com/recaptcha/api.js?onload=onloadRecaptchaCallback&render=explicit" async defer></script>
 	</body>
 
 </html>

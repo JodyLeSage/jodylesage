@@ -37,7 +37,6 @@ iframe {
 	height: 100%;
 }
 
-
-.vertical-center {
-	vertical-align: middle;
+#submitRecaptcha {
+	visibility: hidden;
 }
