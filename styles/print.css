@@ -1,53 +1,15 @@
-/*
-	color palette courtesy G. Mesiano
-	http://www.color-hex.com/color-palette/40639
-	
-	#283346 - navy
-	#5f717b - payne's grey
-	#49837c - teal
-*/
-
-
-
-@font-face {
-    font-family: 'Droid Sans Bold';
-    src: url('../fonts/droid-sans/DroidSans-Bold.ttf');
-}
-
-@font-face {
-    font-family: 'Droid Sans Regular';
-    src: url('../fonts/droid-sans/DroidSans.ttf');
-}
-
-@font-face {
-    font-family: 'Lekton Bold';
-    src: url('../fonts/lekton/Lekton-Bold.ttf');
+a {
+	color: #000000;
 }
 
 body {
 	color: #000000;
-	font-size: 0.875rem;
 	background: #fff;
-	font-family: "Droid Sans Regular", Tahoma, sans-serif;
-}
-
-@media only screen and (min-width: 1024px) {
-	main {
-		margin: 1cm auto;
-		background: #fff;
-		box-shadow: 0px 4px 5px #a6a6a6;
-		width: 21cm;
-		min-height: 29.7cm;
-		padding: 2cm;
-	}
-	
-	body, html {
-		background-color: #f7f7f7;
-	}
+	font-family: "Times New Roman", Times, serif;
 }
 
 html {
-	width: 95%;
+	height: auto;
 	margin: 0 auto;
 }
 
@@ -55,7 +17,7 @@ html {
   padding-bottom: 10px;
   padding-top: 10px;
   border-bottom: 2px solid #bcbcbc;
-  margin: 0 0 8px 0;
+  margin: 8px 0 8px 0;
 }
 
 .right-time-range {
@@ -66,15 +28,13 @@ html {
 	margin-left: -90px;
 	padding-right: 10px;
 	font-weight: 200;
-	color: #5f717b;
 }
 
 h1 {
   font-size: 46px;
   display: inline;
   font-weight: 400;
-  font-family: "Lekton Bold", Monaco, monospace;
-  color: #283346;
+  font-family: "Georgia", "Book Antiqua", Times, serif;
 }
 
 h2:before{
@@ -83,17 +43,16 @@ h2:before{
 	width: 80px;
 	margin-right: 10px;
 	display: inline-block;
-	border-bottom: 5px solid #49837c;
+	border-bottom: 5px solid #bcbcbc;
 }
 
 h2 {
-	font-family: "Droid Sans Bold", Tahoma, sans-serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 16px;
 	font-weight: bold;
 	padding-top: 12px;
 	padding-bottom: 2px;
 	margin: 0 0 4px 0;
-	color: #49837c;
 	
 	border-bottom: 0.8px solid #bcbcbc;
 }
@@ -102,13 +61,12 @@ main p {
 	margin: 0;
 	font-weight: 300;
 	position: relative;
-	
 }
 
 section {
 	padding-left: 80px;
 	margin-bottom: 0.5rem;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 section details {
@@ -119,7 +77,6 @@ section summary {
 	font-weight: 600;
 	margin: 0 0 1px 0;
 	display: block;
-	color: #283346;
 }
 
 summary::-webkit-details-marker {
@@ -144,14 +101,8 @@ header ul{
 }
 
 main a {
-    color: #444;
     text-decoration: none;
     border-bottom: none;
-}
-
-main a:hover{
-	color: #49837c;
-	border-bottom: 1px dashed #bcbcbc
 }
 
 header a {

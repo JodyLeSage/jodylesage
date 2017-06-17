@@ -1,9 +1,9 @@
 /* css for jodylesage.com */
 
 body {
-	padding-top: 51px;;
+	padding-top: 61px;;
 	height: 95%;
-	
+	background-color: #e7e7e7;
 }
 
 .container{
@@ -28,6 +28,7 @@ body {
 html{
 	height: 100%;
 	min-height: 100%;
+	background-color: #eee;
 }
 
 iframe {

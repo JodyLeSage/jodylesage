@@ -14,10 +14,17 @@
 
 		<meta name="author" content="Jody LeSage" />
 		<title>Jody LeSage — Resume</title>
-		<link rel="stylesheet" href="styles/resume.css" />
+
+		<link rel="stylesheet" href="styles/resume.css" media="screen" />
+		
+		<!--
+			special CSS for printing
+			colors changed to black, white, and gray
+			larger text in serif fonts for readability
+		-->
+		<link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
 		
 		<script>
-			//TODO: move this code to an external file?
 			function getCurrentYearAndMonth() {
 				var d = new Date();
 				var s = d.getFullYear() + '-';
@@ -114,10 +121,10 @@
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
 						<span class="right-time-range">
-							<time datetime="2017-07">Jul. 2017</time> - <time id="present">Present</time>
+							<time datetime="2017-07">Jul. 2017</time> -<br/>- <time id="present">Present</time>
 						</span>
 					</summary>
-					<p>Details of current work are classified.</p>
+					<p>Current work details are classified.</p>
 					<ul>
 						<li>
 							<span itemscope itemtype="http://www.w3.org/2002/07/owl#Thing">
@@ -152,7 +159,7 @@
 							<span itemprop="name">Next Century Corporation</span>
 						</span>
 						<span class="right-time-range">
-							<time datetime="2017-02">Feb. 2017</time> - <time datetime="2017-05">May 2017</time>
+							<time datetime="2017-02">Feb. 2017</time> -<br/>- <time datetime="2017-05">May 2017</time>
 						</span>
 					</summary>
 					<p>Worked on a small team developing a common operating picture to visualize Montgomery County's crime and arrest datasets over three different views.  This project was for a course at UMBC as part of a partnership with Next Century.</p>
@@ -170,7 +177,7 @@
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
 						<span class="right-time-range">
-							<time datetime="2016-06">Jun. 2016</time> - <time datetime="2016-08">Aug. 2016</time>
+							<time datetime="2016-06">Jun. 2016</time> -<br/>- <time datetime="2016-08">Aug. 2016</time>
 						</span>
 					</summary>
 					<p>Participated in Booz Allen Hamilton's 2016 summer cyber internship as an enterprise developer on the SmartBillboard project</p>
