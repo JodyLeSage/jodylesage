@@ -16,4 +16,12 @@ function addListeners(){
 		$('.content').hide(); // hides all content divs
 		$('#' + $(this).attr('href') ).show(); //get the href and use it find which div to show
 	});
+	
+	// validate user after page loads
+	$(window).on('load', function(){});
+}
+
+/* code that runs after user is validated using invisible reCAPTCHA */
+function userValidated(token){
+	console.log("USER VALIDATED");
 }
