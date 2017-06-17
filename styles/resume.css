@@ -11,6 +11,7 @@
 	float: left;
 	position: relative;
 	top: 12px;
+	left: 10px;
 }
 
 @font-face {
@@ -30,7 +31,7 @@
 
 body {
 	color: #000000;
-	font-size: 0.875rem;
+	/*font-size: 1rem;*/
 	background: #fff;
 	font-family: "Droid Sans Regular", Tahoma, sans-serif;
 }
@@ -51,8 +52,9 @@ body {
 }
 
 html {
-	width: 95%;
+	min-width: 515px;
 	margin: 0 auto;
+	background-color: #f7f7f7;
 }
 
 .name {
@@ -65,9 +67,9 @@ html {
 .right-time-range {
 	float: left;
 	display: block;
-	width: 80px;
+	width: 100px;
 	text-align: center;
-	margin-left: -90px;
+	margin-left: -100px;
 	padding-right: 10px;
 	font-weight: 200;
 	color: #5f717b;
@@ -83,8 +85,8 @@ h1 {
 
 h2:before{
 	content: '';
-	margin-left: -90px;
-	width: 80px;
+	margin-left: -110px;
+	width: 100px;
 	margin-right: 10px;
 	display: inline-block;
 	border-bottom: 5px solid #49837c;
@@ -110,7 +112,7 @@ main p {
 }
 
 section {
-	padding-left: 80px;
+	padding-left: 100px;
 	margin-bottom: 0.5rem;
 	font-size: 14px;
 }

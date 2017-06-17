@@ -32,7 +32,7 @@
 							<a data-toggle="tab" href="resume" class="contains-private-info" >Resume</a>
 						</li>
 						<li>
-							<a data-toggle="tab" href="contact">Contact</a>
+							<a data-toggle="tab" href="contact" class="contains-private-info">Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -52,7 +52,7 @@
 			</div>
 
 			<div id="resume" class="content">
-				<iframe id="resume-iframe" src="resume.html"></iframe>
+				<iframe id="resume-iframe" name="resume-iframe" src="resume.html"></iframe>
 			</div>
 
 			<div id="contact" class="content">
@@ -62,8 +62,16 @@
 							<img src="images/portrait.jpg" class="img-circle" alt="Jody LeSage" width="300" height="300" /> 
 						</div>
 						<div class="col-md-7">
-							<p>my info</p>
-							<a id="contact-email"></a>
+							<div class="my-name">
+								<h1>Jody LeSage<br/><small>Software Engineer</small></h1>
+							</div>
+							<div class="my-info">
+								<h3>
+									<a href="https://github.com/JodyLeSage">Github</a><br>
+									<a href="https://www.linkedin.com/in/jody-lesage">LinkedIn<br>
+									<a id="contact-email"></a>
+								</h3>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -89,7 +97,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		
 		<!-- custom JS must go before reCAPTCHA -->
-		<script src="jodylesage.js"></script>
+		<script src="js/jodylesage.js"></script>
+		
 		
 		<!-- reCAPTCHA assets -->
 		<script src="https://www.google.com/recaptcha/api.js?onload=onloadRecaptchaCallback&render=explicit" async defer></script>

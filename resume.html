@@ -15,39 +15,21 @@
 		<meta name="author" content="Jody LeSage" />
 		<title>Jody LeSage — Resume</title>
 
-		<link rel="stylesheet" href="styles/resume.css" media="screen" />
+		
 		
 		<!-- Bootstrap core CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
 		
 		<!-- Bootstrap theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+		
+		<link rel="stylesheet" href="styles/resume.css" media="screen" />
 		<!--
 			special CSS for printing
 			colors changed to black, white, and gray
 			larger text in serif fonts for readability
 		-->
 		<link rel="stylesheet" type="text/css" href="styles/print.css" media="print" />
-		
-		<script>
-			function getCurrentYearAndMonth() {
-				var d = new Date();
-				var s = d.getFullYear() + '-';
-				if (d.getMonth() < 10){
-					s = s + '0';	// pad a leading zero for single-digit months
-				}
-				var s = s + d.getMonth();
-				return s;
-			}
-
-			window.onload = function() {
-				document.getElementById("present").setAttribute("datetime",getCurrentYearAndMonth());
-			};
-			
-			function printResume(){
-				window.print();
-			};
-		</script>
 	</head>
 
 	<body>
@@ -76,7 +58,7 @@
 					<link itemprop="sameAs" href="http://dbpedia.org/page/Genderqueer" />
 				</meta>
 				<meta itemprop="jobTitle" content="Software Engineer" />
-				<link itemprop="sameAs" href="www.linkedin.com/in/jody-lesage" />
+				<link itemprop="sameAs" href="https://www.linkedin.com/in/jody-lesage" />
 
 				<ul>
 					<li>
@@ -220,6 +202,14 @@
 
 
 		</main>
+		
+		<script src="js/helperfunctions.js"></script>
+		<script>
+			// populate microdata with current month
+			window.onload = function() {
+				document.getElementById("present").setAttribute("datetime",getCurrentYearAndMonth());
+			};
+		</script>
 	</body>
 
 </html>
