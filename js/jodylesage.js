@@ -39,13 +39,13 @@ function userValidated(token) {
 
 
 function onloadRecaptchaCallback(){
-	// add recaptcha listeners
+	// enable buttons and add recaptcha listeners
+	$('.validate-button').removeClass("disabled");
 	$('.validate-button').on('click', function(){
 		if(!userIsValidated){
 			grecaptcha.execute();
 		}
 	});
-	
 	var validateButton = getValidateButtonFromIFrame();
 	validateButton.removeClass("disabled");
 	validateButton.on('click', function(){
@@ -72,7 +72,7 @@ function populatePersonalData(json){
 	// update the email anchor in the resume iFrame
 	var iframeBody = $('#resume-iframe').contents().find('body');
 	var emailItem = iframeBody.contents().find('#resume-email');
-	if(json["email"]){
+	if(json["email"] !== ''){
 		userIsValidated = true;
 		
 		emailItem.attr({
@@ -90,6 +90,8 @@ function populatePersonalData(json){
 		});
 		emailItem.hide().html(json["email"]).fadeIn('slow');
 		
+		// remove 'show contact info' buttons after user has passed the captcha
+		$('.validate-button').hide('slow', function() { validateButton.remove(); });
 		var validateButton = getValidateButtonFromIFrame();
 		validateButton.hide('slow', function() { validateButton.remove(); });
 	}

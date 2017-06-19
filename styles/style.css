@@ -102,7 +102,11 @@ img {
 }
 
 /* CSS for printing */
-@media only print{
+@media only print{	
+	.no-print {
+		display: none !important;
+	};
+	
 	body {
 		padding-top: 0;
 		padding-bottom: 20px;
@@ -110,6 +114,10 @@ img {
 		display: block;
 		margin: 8px 8px 8px 8px;
 		width: 95%;
+	};
+	
+	.grecaptcha-badge {
+		display: none !important;
 	};
 	
 	#resume{
@@ -132,11 +140,9 @@ img {
 		page-break-inside: avoid;
 	};
 
-	#recaptcha{
-		display: none;
-	};
+	
 }
 
 #submitRecaptcha {
-	display: none;
+	display: none !important;
 };
