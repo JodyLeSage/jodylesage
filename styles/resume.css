@@ -60,6 +60,7 @@ body {
 }
 
 html {
+	overflow: hidden;
 	min-width: 515px;
 	margin: 0 auto;
 	background-color: #f7f7f7;
