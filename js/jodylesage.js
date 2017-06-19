@@ -46,7 +46,9 @@ function onloadRecaptchaCallback(){
 		}
 	});
 	
-	$('#resume-iframe').contents().find('header').contents().find('.validate-button').on('click', function(){
+	var validateButton = getValidateButtonFromIFrame();
+	validateButton.removeClass("disabled");
+	validateButton.on('click', function(){
 		if(!userIsValidated){
 			grecaptcha.execute();
 		}
@@ -58,6 +60,11 @@ function onloadRecaptchaCallback(){
 		'sitekey' : '6LeOwyUUAAAAAIy-WfjdNkxv-KcWauJ6mzSiICUH',
 		'callback' : userValidated
 	});
+}
+
+// returns "show contact info" button from resume
+function getValidateButtonFromIFrame(){
+	return $('#resume-iframe').contents().find('header').contents().find('.validate-button');
 }
 
 /* function for inserting personal data into the site after the user has been validated */
@@ -83,7 +90,8 @@ function populatePersonalData(json){
 		});
 		emailItem.hide().html(json["email"]).fadeIn('slow');
 		
-		$('#resume-iframe').contents().find('header').contents().find('.validate-button').addClass('disabled').fadeIn('slow');
+		var validateButton = getValidateButtonFromIFrame();
+		validateButton.hide('slow', function() { validateButton.remove(); });
 	}
 	
 }

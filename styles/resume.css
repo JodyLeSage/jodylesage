@@ -14,6 +14,8 @@
 	left: 0px;
 }
 
+
+
 @font-face {
     font-family: 'Droid Sans Bold';
     src: url('../fonts/droid-sans/DroidSans-Bold.ttf');
@@ -48,6 +50,12 @@ body {
 	
 	body, html {
 		background-color: #f7f7f7;
+	}
+}
+
+@media only screen and (max-width: 1023px) {
+	main {
+		padding: 0.5cm;
 	}
 }
 
