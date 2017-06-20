@@ -49,10 +49,14 @@ body {
 }
 
 .featurette-heading {
-      font-size: 50px;
+      font-size: 30px;
       font-weight: 300;
       line-height: 1;
       letter-spacing: -1px;
+}
+
+.name-plate {
+	font-size: 50px;
 }
 
 form, div {
@@ -74,19 +78,16 @@ form, div {
     color: #283346;
 }
 
+.portfolio-img {
+	max-width: 50%;
+}
+
 #home {
 	display: block;
-	
-	/*
-	background-image: url(../images/keyboard.jpeg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	
-	-webkit-filter: blur(3px);
-	-moz-filter: blur(3px);
-	-o-filter: blur(3px);
-	-ms-filter: blur(3px);
-	filter: blur(3px);*/
+}
+
+#face {
+	width: 300px;
 }
 
 html{
@@ -104,6 +105,8 @@ iframe {
 img {
 	height: auto;
 }
+
+
 
 /*
 	img with caption css courtesy Pete Houston
@@ -129,7 +132,7 @@ img {
 }
 
 /* responsive CSS */
-@media (max-width: 979px) {
+@media (max-width: 750px) {
 	.featurette {
         height: auto;
         padding: 0;
@@ -138,7 +141,7 @@ img {
 	.featurette-image.pull-left {
 		display: block;
 		float: none!important;
-		max-width: 40%;
+		max-width: 50%;
 		margin: 0 auto 20px;
 	}
 	
