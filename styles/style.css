@@ -20,7 +20,6 @@ body {
 }
 
 .center-cropped {
-	/*background-color: none;*/
 	background-image: url("../images/keyboard_white.jpg");
 	background-size: cover;
 	background-position: center center;
@@ -126,10 +125,10 @@ img {
 
 .caption {
     position: absolute;
-    top: 35%;
-	left: 30%;
+    top: 30%;
+	left: 25%;
     
-	width: 40%;
+	width: 50%;
 }
 
 .sub-caption {
