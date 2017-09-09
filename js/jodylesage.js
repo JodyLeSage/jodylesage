@@ -18,6 +18,7 @@ function addListeners(){
 		$('#' + $(this).attr('href') ).show(); //get the href and use it find which div to show
 	});
 	
+	/* navigates to home tab when 'Jody LeSage' brand element is clicked */
 	$(".navbar-brand").on('click', function(){
 		$("#homeTab").click();
 	});
