@@ -19,6 +19,14 @@ body {
 	margin: auto;
 }
 
+.center-cropped {
+	/*background-color: none;*/
+	background-image: url("../images/keyboard_white.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
 #contact {
 	padding-top: 30px;
 	padding-left: 30px;
@@ -103,10 +111,9 @@ iframe {
 }
 
 img {
-	height: auto;
+	min-width: 100%;
+	min-height: 100%;
 }
-
-
 
 /*
 	img with caption css courtesy Pete Houston
@@ -114,6 +121,7 @@ img {
 */
 .thumbnail {
     position: relative;
+	height: 98%;
 }
 
 .caption {
