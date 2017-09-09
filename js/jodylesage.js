@@ -72,7 +72,13 @@ function populatePersonalData(json){
 	// update the email anchor in the resume iFrame
 	var iframeBody = $('#resume-iframe').contents().find('body');
 	var emailItem = iframeBody.contents().find('#resume-email');
-	if(json["email"] !== ''){
+	
+	if(json["errMessage"]){
+		console.log(json["errMessage"]);
+		return;
+	}
+	
+	if(json["email"]){
 		userIsValidated = true;
 		
 		emailItem.attr({

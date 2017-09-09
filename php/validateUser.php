@@ -17,7 +17,9 @@
 	$result = file_get_contents($url, false, $context);
 	
 	if ($result === FALSE) {
-		// TODO: handle errors
+		$errMsg = ["errMessage" => "PHP function file_get_contents could not connect to reCaptcha validation servers"];
+		echo json_encode($errMsg, JSON_UNESCAPED_SLASHES);
+		return;
 	}
 	
 	$data = json_decode($result, true);
