@@ -109,11 +109,6 @@ iframe {
 	height: 100%;
 }
 
-img {
-	min-width: 100%;
-	min-height: 100%;
-}
-
 /*
 	img with caption css courtesy Pete Houston
 	https://gist.github.com/petehouston/85dd33210c0764eeae55
