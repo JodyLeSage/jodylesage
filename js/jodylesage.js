@@ -22,6 +22,15 @@ function addListeners(){
 	$(".navbar-brand").on('click', function(){
 		$("#homeTab").click();
 	});
+	
+	/*
+		code to manually manage active menu items courtesy Pete Nykänen
+		https://stackoverflow.com/questions/24514717/bootstrap-navbar-active-state-not-working
+	*/
+	$(".nav a").on("click", function(){
+		$(".nav").find(".active").removeClass("active");
+		$(this).parent().addClass("active");
+	});
 }
 
 /* use the backend to verify the user was indeed validated by recaptcha */
