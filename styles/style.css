@@ -32,7 +32,7 @@ body {
 }
 
 .container{
-	height: 100%;
+	width: 100%;
 }
 
 .content {
@@ -133,8 +133,8 @@ iframe {
     color: #283346;
 }
 
-/* responsive CSS */
-@media (max-width: 750px) {
+/* responsive CSS  (768 is the minimum mobile width for bootstrap)*/
+@media (max-width: 768px) {
 	.featurette {
         height: auto;
         padding: 0;
