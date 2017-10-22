@@ -12,6 +12,10 @@
 	
 }
 
+#action-buttons  {
+	background-color: none;
+}
+
 body {
 	padding-top: 61px;
 	height: 100%;
@@ -26,11 +30,13 @@ body {
 	background-repeat: no-repeat;
 }
 
-#contact {
-	padding-top: 30px;
-	padding-left: 30px;
-	margin: auto;
+.contact-info {
 	position: relative;
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	text-align: center;
+	margin-top: 50px;
 }
 
 .container{
@@ -44,14 +50,19 @@ body {
 	position: inherit;
 }
 
+.contact-element {
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .featurette {
-      padding-top: 45px;
-      overflow: hidden;
+	padding-top: 45px;
+	overflow: hidden;
 }
 
 .featurette-image {
-      margin-top: -45px;
-    }
+  margin-top: -45px;
+}
 
 .featurette-image.pull-left {
 	margin-right: 40px;
@@ -101,7 +112,8 @@ form, div {
 }
 
 #face {
-	width: 300px;
+	max-height: 350px;
+	max-width: 85%;
 }
 
 html{
@@ -141,6 +153,7 @@ iframe {
 
 /* responsive CSS  (768 is the minimum mobile width for bootstrap)*/
 @media (max-width: 768px) {
+	/*
 	.featurette {
         height: auto;
         padding: 0;
@@ -151,8 +164,9 @@ iframe {
 		float: none!important;
 		max-width: 50%;
 		margin: 0 auto 20px;
-	}
+	}*/
 	
+
 	h2, h3, #action-buttons{
 		text-align: center;
 	}
