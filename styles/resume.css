@@ -36,6 +36,7 @@ body {
 	font-family: "Droid Sans Regular", Tahoma, sans-serif;
 }
 
+/* CSS to display as a "page on a desk" for wide displays */
 @media only screen and (min-width: 1024px) {
 	main {
 		margin: 1cm auto;
@@ -57,8 +58,29 @@ body {
 	}
 }
 
+/* mobile formatting */
+@media only screen and (max-width: 768px) {
+	header {
+		display: none!important;
+	}
+	html {
+		min-width: 100%;
+		min-height: 100%;
+	}
+	h2:before {
+		margin-left: 0px!important;
+		width: 0px!important;
+		margin-right: 0px!important;
+		display: inline-block!important;
+		border-bottom: none!important;
+	}
+	section {
+		padding-left: 0px!important;
+	}
+}
+
 html {
-	min-width: 515px;
+	/*min-width: 515px;*/
 	margin: 0 auto;
 	background-color: #f7f7f7;
 }

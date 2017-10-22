@@ -157,7 +157,9 @@ iframe {
 		text-align: center;
 	}
 	
-	
+	iframe {
+		min-width: 100%;
+	}
 }
 
 /* CSS for printing */
