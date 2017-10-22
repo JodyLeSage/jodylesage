@@ -29,6 +29,8 @@ body {
 #contact {
 	padding-top: 30px;
 	padding-left: 30px;
+	margin: auto;
+	position: relative;
 }
 
 .container{
@@ -127,9 +129,7 @@ iframe {
     position: relative;
     top: 30%;
 	margin: auto;
-    
-	min-width: 50%;
-	max-width: 80%;
+	max-width: 50%;
 }
 
 .sub-caption {
@@ -159,6 +159,11 @@ iframe {
 	
 	iframe {
 		min-width: 100%;
+	}
+	
+	.caption {
+		top: 25%;
+		max-width: 80%;
 	}
 }
 
