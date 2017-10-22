@@ -85,6 +85,11 @@ form, div {
     color: #283346;
 }
 
+.navbar-nav {
+	font-size: 15px;
+	font-weight: bold;
+}
+
 .portfolio-img {
 	max-width: 50%;
 }
@@ -119,11 +124,12 @@ iframe {
 }
 
 .caption {
-    position: absolute;
+    position: relative;
     top: 30%;
-	left: 25%;
+	margin: auto;
     
-	width: 50%;
+	min-width: 50%;
+	max-width: 80%;
 }
 
 .sub-caption {
