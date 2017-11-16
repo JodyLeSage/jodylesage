@@ -67,6 +67,10 @@ h2 {
 	border-bottom: 0.8px solid #bcbcbc;
 }
 
+img.cert-badge {
+	display: none !important;
+}
+
 main p {
 	margin: 0;
 	font-weight: 300;
