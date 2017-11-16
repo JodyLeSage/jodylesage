@@ -79,6 +79,10 @@ body {
 	}
 }
 
+.cert-badge {
+	max-width: 65px;
+}
+
 html {
 	/*min-width: 515px;*/
 	margin: 0 auto;
@@ -183,7 +187,7 @@ main a {
     border-bottom: none;
 }
 
-main a:hover{
+main a.underline:hover{
 	color: #49837c;
 	border-bottom: 1px dashed #bcbcbc
 }

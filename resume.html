@@ -58,13 +58,13 @@
 
 				<ul>
 					<li>
-						<a href="https://jodylesage.com" itemprop="homepage" content="https://jodylesage.com">jodylesage.com</a>
+						<a href="https://jodylesage.com" itemprop="homepage" content="https://jodylesage.com" class="underline">jodylesage.com</a>
 					</li>
 					<li>
-						<a id="resume-email"></a>
+						<a id="resume-email" class="underline"></a>
 					</li>
 					<li>
-						<a href="https://github.com/JodyLeSage" itemprop="sameAs">github.com/JodyLeSage</a>
+						<a href="https://github.com/JodyLeSage" itemprop="sameAs" class="underline">github.com/JodyLeSage</a>
 					</li>
 				</ul>
 			</header>
@@ -76,34 +76,27 @@
 
 			<section class="education">
 				<h2>Education</h2>
-				<details open>
-					<summary>
-						<span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-							<link href="http://umbc.edu" itemprop="url" />
-							<span itemprop="name">University of Maryland, Baltimore County</span>,
-						</span>
-						B.S. in Computer Science, GPA 3.2
-						<span class="right-time-range">
-							<time>2015</time> - <time>2017</time>
-						</span>
-					</summary>
-					<ul>
-						<li>Electives in Artificial Intelligence/Machine Learning, Web Development, and Geospatial Systems</li>
-					</ul>
+				<summary>
+					<span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+						<link href="http://umbc.edu" itemprop="url" />
+						<span itemprop="name">University of Maryland Baltimore County</span>,
+					</span>
+					B.S. in Computer Science
+					<span class="right-time-range">
+						<time>2015</time> - <time>2017</time>
+					</span>
+				</summary>
 
-				</details>
-				<details open>
-					<summary>
-						<span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
-							<link href="https://www.pgcc.edu" itemprop="url" />
-							<span itemprop="name">Prince George's Community College</span>,
-						</span>
-						A.S. in Computer Science, GPA 3.8
-						<span class="right-time-range">
-							<time>2014</time> - <time>2015</time>
-						</span>
-					</summary>
-				</details>
+				<summary>
+					<span itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+						<link href="https://www.pgcc.edu" itemprop="url" />
+						<span itemprop="name">Prince George's Community College</span>,
+					</span>
+					A.S. in Computer Science
+					<span class="right-time-range">
+						<time>2014</time> - <time>2015</time>
+					</span>
+				</summary>
 			</section>
 
 			<section class="experience">
@@ -116,7 +109,7 @@
 							<span itemprop="name">Booz Allen Hamilton</span>
 						</span>
 						<span class="right-time-range">
-							<time datetime="2017-07">Jul. 2017</time> -<br/>- <time id="present">Present</time>
+							<time datetime="2017-07">Jul. 2017</time> -<br/>- <time class="present">Present</time>
 						</span>
 					</summary>
 					<p>Current work details are classified.</p>
@@ -145,9 +138,9 @@
 					</summary>
 					<p>Worked on a small team developing a common operating picture to visualize Montgomery County's crime and arrest datasets over three different views.  This project was for a course at UMBC as part of a partnership with Next Century.</p>
 					<ul>
-						<li>Wrote python scripts to page through the dataset on REST endpoints, geolocate addresses using Google Maps API, and write the cleaned data out to a SQLite database.</li>
-						<li>Utilized the Flask framework to set up object-relational mapping with the database and serve filtered data queries on custom endpoints.</li>
-						<li>Used Javascript/JQuery to integrate site modules written by other team members.</li>
+						<li>Wrote python scripts for parsing, geolocating, and storing data.</li>
+						<li>Utilized object-relational mapping to serve filtered data queries.</li>
+						<li>Used Javascript to integrate site modules written by other team members.</li>
 					</ul>
 				</details>
 
@@ -160,14 +153,30 @@
 					</summary>
 					<p>Participated in Booz Allen Hamilton's 2016 summer cyber internship as an enterprise developer on the SmartBillboard project</p>
 					<ul>
-						<li>Wrote a program to scrape web content and associate keywords with websites using Python. </li>
-						<li>Combined the harvested dataset (features) with a 3rd party dataset (labels).</li>
-						<li>Used the now-labeled dataset to successfully predict demographic information from web traffic.</li>
+						<li>Scraped information from the web and correlated it with existing data.
+						<li>Built a data analysis tool that successfully predicted demographic information from web traffic.</li>
 					</ul>
 				</details>
 
 			</section>
 
+			<section class="certifications">
+				<h2>Certifications</h2>
+				<table class="cert-table">
+					<tr>
+						<td>ICAgile Certified Professional</td>
+						<span class="right-time-range">
+							<time datetime="2017-09">Sep. 2017</time> -<br/>- <time class="present">Present</time>
+						</span>
+						<td>
+							<a href="https://icagile.com/Agile-Professionals/Find-Agile-Professionals/ctl/UserDetails/mid/938/uid/cf7ea917-595a-4478-80ea-cc22ca8484c9">
+								<img src="images/icp-badge.png" class="cert-badge" />
+							</a>
+						</td>
+					</tr>
+				</table>
+			</section>
+			
 			<section class="skills">
 				<h2>Technical Skills</h2>
 				<ul>
@@ -179,16 +188,10 @@
 				</ul>
 			</section>
 
-
 		</main>
 		
 		<script src="js/helperfunctions.js"></script>
-		<script>
-			// populate microdata with current month
-			window.onload = function() {
-				document.getElementById("present").setAttribute("datetime",getCurrentYearAndMonth());
-			};
-		</script>
+
 	</body>
 
 </html>
