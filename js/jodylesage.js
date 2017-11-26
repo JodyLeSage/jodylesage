@@ -3,7 +3,11 @@ var userIsValidated = false;
 
 /* initialize the page */
 $(document).ready(function(){
+	if (!window.location.hash) {
+		window.location.hash = "#home";
+	}
 	addListeners();
+	handleNewtabClicks();
 });
 
 /* function for adding listers to page elements */
@@ -13,9 +17,25 @@ function addListeners(){
 		https://stackoverflow.com/questions/19579083/bootstrap-how-to-use-navbar
 	*/
 	$(".navbar-nav a").on('click',function(e) {
-		e.preventDefault(); // stops link from loading
 		$('.content').hide(); // hides all content divs
-		$('#' + $(this).attr('href') ).show(); //get the href and use it find which div to show
+		
+		var hash;
+		if (e.isTrigger) {
+			hash = window.location.hash;
+		}
+		else {
+			hash = $(this).attr('href');
+			window.location.hash = hash;
+		}
+		
+		$(hash).show();
+	});
+	
+	// fix wonky bootstrap CSS on middle-click
+	$(".navbar-nav a").on('mouseup',function(e) {
+		if (e.which != 1) {
+			$(this).blur();
+		}
 	});
 	
 	/* navigates to home tab when 'Jody LeSage' brand element is clicked */
@@ -27,9 +47,12 @@ function addListeners(){
 		code to manually manage active menu items courtesy Pete Nykänen
 		https://stackoverflow.com/questions/24514717/bootstrap-navbar-active-state-not-working
 	*/
-	$(".nav a").on("click", function(){
-		$(".nav").find(".active").removeClass("active");
-		$(this).parent().addClass("active");
+	$(".nav a").on("click", function(e){
+		if (e.which == 1) {
+			$(".nav").find(".active").removeClass("active");
+			$(this).parent().addClass("active");
+			$(this).parent().focus();
+		}
 	});
 }
 
@@ -45,7 +68,6 @@ function userValidated(token) {
 	xmlhttp.open("POST", "php/validateUser.php?token=" + token, true);
 	xmlhttp.send();
 }
-
 
 function onloadRecaptchaCallback(){
 	// enable buttons and add recaptcha listeners
@@ -71,14 +93,14 @@ function onloadRecaptchaCallback(){
 	});
 }
 
-// returns "show contact info" button from resume
+/* returns "show contact info" button from resume */
 function getValidateButtonFromIFrame(){
 	return $('#resume-iframe').contents().find('header').contents().find('.validate-button');
 }
 
 /* function for inserting personal data into the site after the user has been validated */
 function populatePersonalData(json){
-	// update the email anchor in the resume iFrame
+	/* update the email anchor in the resume iFrame */
 	var iframeBody = $('#resume-iframe').contents().find('body');
 	var emailItem = iframeBody.contents().find('#resume-email');
 	
@@ -96,8 +118,8 @@ function populatePersonalData(json){
 		});
 		emailItem.hide().html(json["email"]).fadeIn('slow');	// fade in for dramatic effect
 		
-		// update information on the contact page
-		// cannot be streamlined because of the iFrame
+		/* update information on the contact page
+		   cannot be streamlined because of the iFrame */
 		emailItem = $('#contact-email');
 		emailItem.attr({
 			"href" : "mailto:" + json["email"],
@@ -105,10 +127,15 @@ function populatePersonalData(json){
 		});
 		emailItem.hide().html(json["email"]).fadeIn('slow');
 		
-		// remove 'show contact info' buttons after user has passed the captcha
+		/* remove 'show contact info' buttons after user has passed the captcha */
 		$('.validate-button').hide('slow', function() { validateButton.remove(); });
 		var validateButton = getValidateButtonFromIFrame();
 		validateButton.hide('slow', function() { validateButton.remove(); });
 	}
-	
 }
+
+/* opens the correct tab when user middle-clicks a navbar item */
+function handleNewtabClicks(){
+	var hash = window.location.hash;
+	$('nav a[href="' + hash + '"]').click();
+};
