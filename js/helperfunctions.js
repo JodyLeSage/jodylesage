@@ -14,10 +14,12 @@ function printResume(){
 	window.print();
 };
 
-// populate microdata with current month
+
 window.onload = function() {
-	var x = document.getElementsByClassName("present");
-    for (var i = 0; i < x.length; i++) {
-        x[i].setAttribute("datetime",getCurrentYearAndMonth());
-    }    
+	// populate microdata with current month
+	var x = getCurrentYearAndMonth();
+	$('.present').attr("datetime", x);
+	
+	// initialize tooltips
+	$('[data-toggle="tooltip"]').tooltip();
 };
