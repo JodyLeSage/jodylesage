@@ -44,7 +44,7 @@ body {
 		box-shadow: 0px 4px 5px #a6a6a6;
 		width: 21cm;
 		min-height: 29.7cm;
-		padding: 2cm;
+		padding: 2cm 2cm 0px 2cm;
 	}
 	
 	body, html {
@@ -54,7 +54,7 @@ body {
 
 @media only screen and (max-width: 1023px) {
 	main {
-		padding: 0.5cm;
+		padding: 0.5cm 0.5cm 0px 0.5cm;
 	}
 }
 
@@ -190,6 +190,15 @@ main a.underline:hover{
 
 header a {
     line-height: 1.4rem;
+}
+
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
