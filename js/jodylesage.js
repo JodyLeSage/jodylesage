@@ -18,15 +18,9 @@ function addListeners(){
 	*/
 	$(".navbar-nav a").on('click',function(e) {
 		$('.content').hide(); // hides all content divs
-		
-		var hash;
-		if (e.isTrigger) {
-			hash = window.location.hash;
-		}
-		else {
-			hash = $(this).attr('href');
-			window.location.hash = hash;
-		}
+
+		var hash = $(this).attr('href');
+		window.location.hash = hash;
 		
 		$(hash).show();
 	});
