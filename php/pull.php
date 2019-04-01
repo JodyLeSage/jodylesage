@@ -59,7 +59,7 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 		echo 'pong';
 		break;
 	case 'push':
-		shell_exec( 'cd /var/www/vhosts/jodylesage/ && git reset –hard HEAD && git pull' );
+		shell_exec( 'cd /var/www/vhosts/jodylesage/ && git reset --hard HEAD && git pull' );
 		break;
 //	case 'create':
 //		break;
