@@ -60,6 +60,9 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 		break;
 	case 'push':
 		$output = shell_exec( 'cd /var/www/vhosts/jodylesage/ && git reset --hard HEAD && git pull' );
+		if (is_null($output)) {
+			throw new \Exception("git commands did not execute properly");
+		}
 		echo $output;
 		break;
 //	case 'create':
