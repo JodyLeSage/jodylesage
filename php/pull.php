@@ -59,14 +59,13 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 		echo 'pong';
 		break;
 	case 'push':
-		exec( 'cd /srv/www/jodylesage.com/ && git reset --hard HEAD && git pull', $output, $returncode );
+		exec( 'cd /srv/www/jodylesage.com/ && git pull', $output, $returncode );
 		echo $returncode;
 		print_r($output);
 
 		if (is_null($output)) {
 			throw new \Exception("git commands did not execute properly");
 		}
-		echo $output;
 		break;
 //	case 'create':
 //		break;
