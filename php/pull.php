@@ -59,57 +59,19 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 		echo 'pong';
 		break;
 	case 'push':
-		/*exec( 'cd /srv/www/jodylesage.com/ && git pull', $output, $returncode );
+		exec ( 'echo $PWD' );
+		exec ( 'whoami' );
+		exec( 'cd /srv/www/jodylesage.com/ && git pull', $output, $returncode );
 		echo $returncode;
 		print_r($output);
 
 		if (is_null($output)) {
 			throw new \Exception("git commands did not execute properly");
-		}*/
-
-		$commands = array(
-			'echo $PWD',
-			'whoami',
-			'git pull',
-			'git status',
-			'git submodule sync',
-			'git submodule update',
-			'git submodule status',
-		);
-		// Run the commands for output
-		$output = '';
-		foreach($commands AS $command){
-			// Run it
-			$tmp = shell_exec($command);
-			echo $tmp;
-			echo " || ";
-			// Output
-			//$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
-			//$output .= htmlentities(trim($tmp)) . "\n";
 		}
-	break;
+		break;
 	default:
 		header('HTTP/1.0 404 Not Found');
 		echo "Event:$_SERVER[HTTP_X_GITHUB_EVENT] Payload:\n";
 		print_r($payload); # For debug only. Can be found in GitHub hook log.
 		die();
-	// Make it pretty for manual user access (and why not?)
-?>
-<!DOCTYPE HTML>
-<html lang="en-US">
-<head>
-	<meta charset="UTF-8">
-	<title>GIT DEPLOYMENT SCRIPT</title>
-</head>
-<body style="background-color: #000000; color: #FFFFFF; font-weight: bold; padding: 0 10px;">
-<pre>
- .  ____  .    ____________________________
- |/      \|   |                            |
-[| <span style="color: #FF0000;">&hearts;    &hearts;</span> |]  | Git Deployment Script v0.1 |
- |___==___|  /              &copy; oodavid 2012 |
-              |____________________________|
 
-<?php echo $output; ?>
-</pre>
-</body>
-</html>
