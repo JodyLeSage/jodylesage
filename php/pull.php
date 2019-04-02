@@ -81,9 +81,11 @@ switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
 		foreach($commands AS $command){
 			// Run it
 			$tmp = shell_exec($command);
+			echo $tmp;
+			echo " || ";
 			// Output
-			$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
-			$output .= htmlentities(trim($tmp)) . "\n";
+			//$output .= "<span style=\"color: #6BE234;\">\$</span> <span style=\"color: #729FCF;\">{$command}\n</span>";
+			//$output .= htmlentities(trim($tmp)) . "\n";
 		}
 	break;
 	default:
