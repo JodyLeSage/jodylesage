@@ -82,7 +82,7 @@ function onloadRecaptchaCallback(){
 	
 	/* tells recaptcha how to behave */
 	grecaptcha.render('submitRecaptcha', {
-		'sitekey' : '6LeOwyUUAAAAAIy-WfjdNkxv-KcWauJ6mzSiICUH',
+		'sitekey' : '6LckvpwUAAAAAFzKJCU39xB3XDBbrIn01-BhKCmL',
 		'callback' : userValidated
 	});
 }
