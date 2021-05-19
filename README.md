@@ -3,7 +3,7 @@
 ## Features
 <!-- Compatible with screen readers? -->
 * Invisible reCAPTCHA to protect private data while offering a hassle-free experience to most users.
-* Responsive CSS for a readable site across devices and formats.  Separate fonts were chosen to maximize legibility on screen and in print.
+* Responsive CSS for a readable site across devices and formats.  Styles purposely chosen to maximize readability.
 * Custom and off-the-shelf JavaScript create a comfortable look and feel
 * Resume enriched with HTML5 semantic microdata.  [Click Here](http://microdata-extractor.improbable.org/extract/?url=https%3A%2F%2Fjodylesage.com%2Fresume.html) to see what kinds of sematic data are embedded.
 
